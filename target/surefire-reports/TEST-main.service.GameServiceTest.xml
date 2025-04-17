@@ -1,0 +1,149 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<testsuite xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance" xsi:noNamespaceSchemaLocation="https://maven.apache.org/surefire/maven-surefire-plugin/xsd/surefire-test-report-3.0.xsd" version="3.0" name="main.service.GameServiceTest" time="2.9" tests="5" errors="1" skipped="0" failures="3">
+  <properties>
+    <property name="java.specification.version" value="24"/>
+    <property name="sun.cpu.isalist" value="amd64"/>
+    <property name="sun.jnu.encoding" value="UTF-8"/>
+    <property name="java.class.path" value="D:\Project\Rest Service\target\test-classes;D:\Project\Rest Service\target\classes;C:\Users\HP\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\HP\.m2\repository\org\postgresql\postgresql\42.7.5\postgresql-42.7.5.jar;C:\Users\HP\.m2\repository\org\checkerframework\checker-qual\3.48.3\checker-qual-3.48.3.jar;C:\Users\HP\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\HP\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.1.0\jakarta.servlet-api-6.1.0.jar;C:\Users\HP\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\HP\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\HP\.m2\repository\org\mapstruct\mapstruct\1.6.3\mapstruct-1.6.3.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.13.0-M2\junit-jupiter-engine-5.13.0-M2.jar;C:\Users\HP\.m2\repository\org\junit\platform\junit-platform-engine\1.13.0-M2\junit-platform-engine-1.13.0-M2.jar;C:\Users\HP\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.13.0-M2\junit-jupiter-api-5.13.0-M2.jar;C:\Users\HP\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\HP\.m2\repository\org\junit\platform\junit-platform-commons\1.13.0-M2\junit-platform-commons-1.13.0-M2.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter\5.13.0-M2\junit-jupiter-5.13.0-M2.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.13.0-M2\junit-jupiter-params-5.13.0-M2.jar;C:\Users\HP\.m2\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar;C:\Users\HP\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\HP\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar;C:\Users\HP\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\HP\.m2\repository\org\mapstruct\mapstruct-processor\1.6.3\mapstruct-processor-1.6.3.jar;"/>
+    <property name="java.vm.vendor" value="Oracle Corporation"/>
+    <property name="sun.arch.data.model" value="64"/>
+    <property name="user.variant" value=""/>
+    <property name="java.vendor.url" value="https://java.oracle.com/"/>
+    <property name="user.timezone" value="Europe/Moscow"/>
+    <property name="os.name" value="Windows 10"/>
+    <property name="java.vm.specification.version" value="24"/>
+    <property name="sun.java.launcher" value="SUN_STANDARD"/>
+    <property name="user.country" value="RU"/>
+    <property name="sun.boot.library.path" value="C:\Program Files\Java\jdk-24\bin"/>
+    <property name="sun.java.command" value="C:\Users\HP\AppData\Local\Temp\surefire5981039975035439529\surefirebooter-20250416221323659_3.jar C:\Users\HP\AppData\Local\Temp\surefire5981039975035439529 2025-04-16T22-13-22_706-jvmRun1 surefire-20250416221323659_1tmp surefire_0-20250416221323659_2tmp"/>
+    <property name="jdk.debug" value="release"/>
+    <property name="surefire.test.class.path" value="D:\Project\Rest Service\target\test-classes;D:\Project\Rest Service\target\classes;C:\Users\HP\.m2\repository\com\google\code\gson\gson\2.10.1\gson-2.10.1.jar;C:\Users\HP\.m2\repository\org\postgresql\postgresql\42.7.5\postgresql-42.7.5.jar;C:\Users\HP\.m2\repository\org\checkerframework\checker-qual\3.48.3\checker-qual-3.48.3.jar;C:\Users\HP\.m2\repository\org\projectlombok\lombok\1.18.38\lombok-1.18.38.jar;C:\Users\HP\.m2\repository\jakarta\servlet\jakarta.servlet-api\6.1.0\jakarta.servlet-api-6.1.0.jar;C:\Users\HP\.m2\repository\jakarta\persistence\jakarta.persistence-api\3.2.0\jakarta.persistence-api-3.2.0.jar;C:\Users\HP\.m2\repository\jakarta\annotation\jakarta.annotation-api\3.0.0\jakarta.annotation-api-3.0.0.jar;C:\Users\HP\.m2\repository\org\mapstruct\mapstruct\1.6.3\mapstruct-1.6.3.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-engine\5.13.0-M2\junit-jupiter-engine-5.13.0-M2.jar;C:\Users\HP\.m2\repository\org\junit\platform\junit-platform-engine\1.13.0-M2\junit-platform-engine-1.13.0-M2.jar;C:\Users\HP\.m2\repository\org\apiguardian\apiguardian-api\1.1.2\apiguardian-api-1.1.2.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-api\5.13.0-M2\junit-jupiter-api-5.13.0-M2.jar;C:\Users\HP\.m2\repository\org\opentest4j\opentest4j\1.3.0\opentest4j-1.3.0.jar;C:\Users\HP\.m2\repository\org\junit\platform\junit-platform-commons\1.13.0-M2\junit-platform-commons-1.13.0-M2.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter\5.13.0-M2\junit-jupiter-5.13.0-M2.jar;C:\Users\HP\.m2\repository\org\junit\jupiter\junit-jupiter-params\5.13.0-M2\junit-jupiter-params-5.13.0-M2.jar;C:\Users\HP\.m2\repository\org\mockito\mockito-core\5.17.0\mockito-core-5.17.0.jar;C:\Users\HP\.m2\repository\net\bytebuddy\byte-buddy\1.15.11\byte-buddy-1.15.11.jar;C:\Users\HP\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar;C:\Users\HP\.m2\repository\org\objenesis\objenesis\3.3\objenesis-3.3.jar;C:\Users\HP\.m2\repository\org\mapstruct\mapstruct-processor\1.6.3\mapstruct-processor-1.6.3.jar;"/>
+    <property name="sun.cpu.endian" value="little"/>
+    <property name="user.home" value="C:\Users\HP"/>
+    <property name="user.language" value="ru"/>
+    <property name="java.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.version.date" value="2025-03-18"/>
+    <property name="java.home" value="C:\Program Files\Java\jdk-24"/>
+    <property name="file.separator" value="\"/>
+    <property name="basedir" value="D:\Project\Rest Service"/>
+    <property name="java.vm.compressedOopsMode" value="Zero based"/>
+    <property name="line.separator" value="&#10;"/>
+    <property name="java.vm.specification.vendor" value="Oracle Corporation"/>
+    <property name="java.specification.name" value="Java Platform API Specification"/>
+    <property name="surefire.real.class.path" value="C:\Users\HP\AppData\Local\Temp\surefire5981039975035439529\surefirebooter-20250416221323659_3.jar"/>
+    <property name="user.script" value=""/>
+    <property name="sun.management.compiler" value="HotSpot 64-Bit Tiered Compilers"/>
+    <property name="java.runtime.version" value="24+36-3646"/>
+    <property name="user.name" value="HP"/>
+    <property name="stdout.encoding" value="UTF-8"/>
+    <property name="path.separator" value=";"/>
+    <property name="os.version" value="10.0"/>
+    <property name="java.runtime.name" value="Java(TM) SE Runtime Environment"/>
+    <property name="file.encoding" value="UTF-8"/>
+    <property name="java.vm.name" value="Java HotSpot(TM) 64-Bit Server VM"/>
+    <property name="localRepository" value="C:\Users\HP\.m2\repository"/>
+    <property name="java.vendor.url.bug" value="https://bugreport.java.com/bugreport/"/>
+    <property name="java.io.tmpdir" value="C:\Users\HP\AppData\Local\Temp\"/>
+    <property name="java.version" value="24"/>
+    <property name="user.dir" value="D:\Project\Rest Service"/>
+    <property name="os.arch" value="amd64"/>
+    <property name="java.vm.specification.name" value="Java Virtual Machine Specification"/>
+    <property name="sun.os.patch.level" value=""/>
+    <property name="native.encoding" value="UTF-8"/>
+    <property name="java.library.path" value="C:\Program Files\Java\jdk-24\bin;C:\Windows\Sun\Java\bin;C:\Windows\system32;C:\Windows;C:\Python311\Scripts\;C:\Python311\;C:\Program Files\Python311\Scripts\;C:\Program Files\Python311\;D:\Programs\Oracle\dbhomeXE\bin;C:\ProgramData\Oracle\Java\javapath;C:\Program Files\Common Files\Oracle\Java\javapath;C:\Program Files\Eclipse Foundation\jdk-16.0.2.7-hotspot\bin;C:\Windows\system32;C:\Windows;C:\Windows\System32\Wbem;C:\Windows\System32\WindowsPowerShell\v1.0\;C:\Windows\System32\OpenSSH\;C:\Program Files\Microsoft SQL Server\130\Tools\Binn\;d:\programs\altera\quartus\bin;C:\Program Files (x86)\Avest\AvPCM_nces;C:\Program Files\dotnet\;C:\Program Files\Java\jdk-24\bin;C:\development_software\apache-maven-3.9.9\bin;D:\Programs\Terraform;C:\Program Files\nodejs\;C:\ProgramData\chocolatey\bin;C:\Program Files\Docker\Docker\resources\bin;C:\ProgramData\DockerDesktop\version-bin;D:\Programs\apache-zookeeper-3.8.4-bin\bin;D:\Programs\;C:\Program Files\Git\cmd;C:\Program Files (x86)\WiX Toolset v3.14\bin;C:\Users\HP\AppData\Local\Android\Sdk\platform-tools;C:\Users\HP\AppData\Local\Android\Sdk\tools;C:\Users\HP\AppData\Local\Programs\Python\Python310\Scripts\;C:\Users\HP\AppData\Local\Programs\Python\Python310\;C:\Users\HP\AppData\Local\Microsoft\WindowsApps;C:\Users\HP\.dotnet\tools;D:\Programs\Modelsim\modelsim_ase\win32aloem;D:\Programs\WebStorm 2022.1.3\bin;D:\Programs\Microsoft VS Code\bin;C:\Users\HP\AppData\Local\JetBrains\Toolbox\scripts;C:\Users\HP\AppData\Roaming\npm;C:\Program Files\Java\jdk-21\bin;;D:\Programs\IntelliJ IDEA 2024.3.3\bin;;D:\Programs\IntelliJ IDEA Community Edition 2024.3.3\bin;;."/>
+    <property name="java.vm.info" value="mixed mode, sharing"/>
+    <property name="stderr.encoding" value="UTF-8"/>
+    <property name="java.vendor" value="Oracle Corporation"/>
+    <property name="java.vm.version" value="24+36-3646"/>
+    <property name="sun.io.unicode.encoding" value="UnicodeLittle"/>
+    <property name="java.class.version" value="68.0"/>
+  </properties>
+  <testcase name="testFindAll" classname="main.service.GameServiceTest" time="2.608">
+    <failure message="expected: &lt;Test Game&gt; but was: &lt;null&gt;" type="org.opentest4j.AssertionFailedError"><![CDATA[org.opentest4j.AssertionFailedError: expected: <Test Game> but was: <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at main.service.GameServiceTest.testFindAll(GameServiceTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></failure>
+    <system-err><![CDATA[Mockito is currently self-attaching to enable the inline-mock-maker. This will no longer work in future releases of the JDK. Please add Mockito as an agent to your build as described in Mockito's documentation: https://javadoc.io/doc/org.mockito/mockito-core/latest/org.mockito/org/mockito/Mockito.html#0.3
+WARNING: A Java agent has been loaded dynamically (C:\Users\HP\.m2\repository\net\bytebuddy\byte-buddy-agent\1.15.11\byte-buddy-agent-1.15.11.jar)
+WARNING: If a serviceability tool is in use, please run with -XX:+EnableDynamicAgentLoading to hide this warning
+WARNING: If a serviceability tool is not in use, please run with -Djdk.instrument.traceUsage for more information
+WARNING: Dynamic loading of agents will be disallowed by default in a future release
+]]></system-err>
+  </testcase>
+  <testcase name="testFindById" classname="main.service.GameServiceTest" time="0.136">
+    <error message="Подсоединение по адресу localhost:5055 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения." type="org.postgresql.util.PSQLException"><![CDATA[org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5055 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:613)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:199)
+	at main.service.DatabaseConnection.getConnection(DatabaseConnection.java:22)
+	at main.dao.GameDAO.findById(GameDAO.java:29)
+	at main.service.GameServiceTest.testFindById(GameServiceTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
+	at java.base/java.net.Socket.connect(Socket.java:665)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
+	... 12 more
+]]></error>
+  </testcase>
+  <testcase name="testCreate" classname="main.service.GameServiceTest" time="0.056">
+    <failure message="&#10;Argument(s) are different! Wanted:&#10;gameDAO.save(&#10;    GameModel(gameId=10, title=New Game, genre=null)&#10;);&#10;-&gt; at main.dao.GameDAO.save(GameDAO.java:14)&#10;Actual invocations have different arguments:&#10;gameDAO.save(&#10;    GameModel(gameId=null, title=null, genre=null)&#10;);&#10;-&gt; at main.service.GameService.save(GameService.java:45)&#10;" type="Argument(s) are different! Wanted"><![CDATA[Argument(s) are different! Wanted:
+gameDAO.save(
+    GameModel(gameId=10, title=New Game, genre=null)
+);
+-> at main.dao.GameDAO.save(GameDAO.java:14)
+Actual invocations have different arguments:
+gameDAO.save(
+    GameModel(gameId=null, title=null, genre=null)
+);
+-> at main.service.GameService.save(GameService.java:45)
+
+	at main.dao.GameDAO.save(GameDAO.java:14)
+	at main.service.GameServiceTest.testCreate(GameServiceTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></failure>
+  </testcase>
+  <testcase name="testDelete" classname="main.service.GameServiceTest" time="0.008"/>
+  <testcase name="testUpdate" classname="main.service.GameServiceTest" time="0.008">
+    <failure message="&#10;Argument(s) are different! Wanted:&#10;gameDAO.update(&#10;    GameModel(gameId=1, title=Updated Game, genre=null)&#10;);&#10;-&gt; at main.dao.GameDAO.update(GameDAO.java:71)&#10;Actual invocations have different arguments:&#10;gameDAO.update(&#10;    GameModel(gameId=null, title=null, genre=null)&#10;);&#10;-&gt; at main.service.GameService.update(GameService.java:50)&#10;" type="Argument(s) are different! Wanted"><![CDATA[Argument(s) are different! Wanted:
+gameDAO.update(
+    GameModel(gameId=1, title=Updated Game, genre=null)
+);
+-> at main.dao.GameDAO.update(GameDAO.java:71)
+Actual invocations have different arguments:
+gameDAO.update(
+    GameModel(gameId=null, title=null, genre=null)
+);
+-> at main.service.GameService.update(GameService.java:50)
+
+	at main.dao.GameDAO.update(GameDAO.java:71)
+	at main.service.GameServiceTest.testUpdate(GameServiceTest.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+]]></failure>
+  </testcase>
+</testsuite>

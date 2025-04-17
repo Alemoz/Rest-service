@@ -1,0 +1,81 @@
+-------------------------------------------------------------------------------
+Test set: main.service.GameServiceTest
+-------------------------------------------------------------------------------
+Tests run: 5, Failures: 3, Errors: 1, Skipped: 0, Time elapsed: 2.900 s <<< FAILURE! -- in main.service.GameServiceTest
+main.service.GameServiceTest.testFindAll -- Time elapsed: 2.608 s <<< FAILURE!
+org.opentest4j.AssertionFailedError: expected: <Test Game> but was: <null>
+	at org.junit.jupiter.api.AssertionFailureBuilder.build(AssertionFailureBuilder.java:151)
+	at org.junit.jupiter.api.AssertionFailureBuilder.buildAndThrow(AssertionFailureBuilder.java:132)
+	at org.junit.jupiter.api.AssertEquals.failNotEqual(AssertEquals.java:197)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:182)
+	at org.junit.jupiter.api.AssertEquals.assertEquals(AssertEquals.java:177)
+	at org.junit.jupiter.api.Assertions.assertEquals(Assertions.java:1145)
+	at main.service.GameServiceTest.testFindAll(GameServiceTest.java:47)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+main.service.GameServiceTest.testFindById -- Time elapsed: 0.136 s <<< ERROR!
+org.postgresql.util.PSQLException: Подсоединение по адресу localhost:5055 отклонено. Проверьте что хост и порт указаны правильно и что postmaster принимает TCP/IP-подсоединения.
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:352)
+	at org.postgresql.core.ConnectionFactory.openConnection(ConnectionFactory.java:54)
+	at org.postgresql.jdbc.PgConnection.<init>(PgConnection.java:273)
+	at org.postgresql.Driver.makeConnection(Driver.java:446)
+	at org.postgresql.Driver.connect(Driver.java:298)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:613)
+	at java.sql/java.sql.DriverManager.getConnection(DriverManager.java:199)
+	at main.service.DatabaseConnection.getConnection(DatabaseConnection.java:22)
+	at main.dao.GameDAO.findById(GameDAO.java:29)
+	at main.service.GameServiceTest.testFindById(GameServiceTest.java:77)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+Caused by: java.net.ConnectException: Connection refused: getsockopt
+	at java.base/sun.nio.ch.Net.pollConnect(Native Method)
+	at java.base/sun.nio.ch.Net.pollConnectNow(Net.java:628)
+	at java.base/sun.nio.ch.NioSocketImpl.timedFinishConnect(NioSocketImpl.java:533)
+	at java.base/sun.nio.ch.NioSocketImpl.connect(NioSocketImpl.java:583)
+	at java.base/java.net.SocksSocketImpl.connect(SocksSocketImpl.java:282)
+	at java.base/java.net.Socket.connect(Socket.java:665)
+	at org.postgresql.core.PGStream.createSocket(PGStream.java:260)
+	at org.postgresql.core.PGStream.<init>(PGStream.java:121)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.tryConnect(ConnectionFactoryImpl.java:140)
+	at org.postgresql.core.v3.ConnectionFactoryImpl.openConnectionImpl(ConnectionFactoryImpl.java:268)
+	... 12 more
+
+main.service.GameServiceTest.testCreate -- Time elapsed: 0.056 s <<< FAILURE!
+Argument(s) are different! Wanted:
+gameDAO.save(
+    GameModel(gameId=10, title=New Game, genre=null)
+);
+-> at main.dao.GameDAO.save(GameDAO.java:14)
+Actual invocations have different arguments:
+gameDAO.save(
+    GameModel(gameId=null, title=null, genre=null)
+);
+-> at main.service.GameService.save(GameService.java:45)
+
+	at main.dao.GameDAO.save(GameDAO.java:14)
+	at main.service.GameServiceTest.testCreate(GameServiceTest.java:63)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+
+main.service.GameServiceTest.testUpdate -- Time elapsed: 0.008 s <<< FAILURE!
+Argument(s) are different! Wanted:
+gameDAO.update(
+    GameModel(gameId=1, title=Updated Game, genre=null)
+);
+-> at main.dao.GameDAO.update(GameDAO.java:71)
+Actual invocations have different arguments:
+gameDAO.update(
+    GameModel(gameId=null, title=null, genre=null)
+);
+-> at main.service.GameService.update(GameService.java:50)
+
+	at main.dao.GameDAO.update(GameDAO.java:71)
+	at main.service.GameServiceTest.testUpdate(GameServiceTest.java:100)
+	at java.base/java.lang.reflect.Method.invoke(Method.java:565)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+	at java.base/java.util.ArrayList.forEach(ArrayList.java:1604)
+

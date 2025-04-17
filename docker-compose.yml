@@ -1,0 +1,46 @@
+version: '3.8'
+
+networks:
+  pg-net:
+    name: pg-net
+    driver: bridge
+
+services:
+  # PostgreSQL
+  postgres:
+    image: postgres:15
+    container_name: postgres_db1
+    restart: always
+    environment:
+      POSTGRES_USER: postgres
+      POSTGRES_PASSWORD: 111
+      POSTGRES_DB: postgres
+    volumes:
+      - pg_data:/var/lib/postgresql/data
+      - ./init-scripts:/docker-entrypoint-initdb.d  # Скрипты инициализации
+    ports:
+      - "5055:5432"
+    networks:
+      - pg-net
+  # pgAdmin
+  pgadmin:
+    image: dpage/pgadmin4
+    container_name: pgadmin1
+    restart: always
+    environment:
+      PGADMIN_DEFAULT_EMAIL: admin@example.com
+      PGADMIN_DEFAULT_PASSWORD: admin
+      PGADMIN_CONFIG_SERVER_MODE: "False"
+    volumes:
+      - pgadmin_data:/var/lib/pgadmin1  # Сохранение данных pgAdmin
+      - ./pgadmin-servers.json:/pgadmin4/servers.json  # Автоимпорт сервера
+    ports:
+      - "5051:80"
+    depends_on:
+      - postgres
+    networks:
+      - pg-net
+volumes:
+  pg_data:
+  pgadmin_data:
+

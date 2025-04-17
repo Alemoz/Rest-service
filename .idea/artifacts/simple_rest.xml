@@ -1,0 +1,6 @@
+<component name="ArtifactManager">
+  <artifact name="simple-rest">
+    <output-path>$PROJECT_DIR$/out/artifacts/out/artifacts/simple_rest_exploded</output-path>
+    <root id="root" />
+  </artifact>
+</component>

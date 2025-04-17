@@ -1,0 +1,83 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<web-app xmlns="https://jakarta.ee/xml/ns/jakartaee"
+         xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
+         xsi:schemaLocation="https://jakarta.ee/xml/ns/jakartaee
+                             https://jakarta.ee/xml/ns/jakartaee/web-app_5_0.xsd"
+         version="5.0">
+
+    <display-name>Simple REST</display-name>
+
+<!--    <servlet>-->
+<!--        <servlet-name>GameMapServlet</servlet-name>-->
+<!--        <servlet-class>com.example.GameMapServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>GameMapServlet</servlet-name>-->
+<!--        <url-pattern>/api/game-map</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>GameServlet</servlet-name>-->
+<!--        <servlet-class>com.example.GameServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>GameServlet</servlet-name>-->
+<!--        <url-pattern>/api/game</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>GameSessionServlet</servlet-name>-->
+<!--        <servlet-class>com.example.GameSessionServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>GameSessionServlet</servlet-name>-->
+<!--        <url-pattern>/api/game-session</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>MatchServlet</servlet-name>-->
+<!--        <servlet-class>com.example.MatchServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>MatchServlet</servlet-name>-->
+<!--        <url-pattern>/api/match</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>MatchStatServlet</servlet-name>-->
+<!--        <servlet-class>com.example.MatchStatServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>MatchStatServlet</servlet-name>-->
+<!--        <url-pattern>/api/match-stat</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>PlayerServlet</servlet-name>-->
+<!--        <servlet-class>com.example.PlayerServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>PlayerServlet</servlet-name>-->
+<!--        <url-pattern>/api/player</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+<!--    <servlet>-->
+<!--        <servlet-name>TeamServlet</servlet-name>-->
+<!--        <servlet-class>com.example.TeamServlet</servlet-class>-->
+<!--    </servlet>-->
+<!--    <servlet-mapping>-->
+<!--        <servlet-name>TeamServlet</servlet-name>-->
+<!--        <url-pattern>/api/team</url-pattern>-->
+<!--    </servlet-mapping>-->
+
+    <servlet>
+        <servlet-name>MainServlet</servlet-name>
+        <servlet-class>main.servlet.MainServlet</servlet-class>
+    </servlet>
+
+    <servlet-mapping>
+        <servlet-name>MainServlet</servlet-name>
+        <url-pattern>/</url-pattern>
+    </servlet-mapping>
+
+</web-app>
