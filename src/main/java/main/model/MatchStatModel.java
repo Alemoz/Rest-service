@@ -12,7 +12,7 @@ import lombok.NoArgsConstructor;
 public class MatchStatModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long matchStatId;        //PK
+    private Long matchStatId;
 
     private int kills;
     private int deaths;

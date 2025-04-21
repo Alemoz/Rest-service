@@ -15,7 +15,7 @@ import java.util.Set;
 public class TeamModel {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
-    private Long teamId;    //PK
+    private Long teamId;
 
     private String name;
     private LocalDateTime created_at;

@@ -99,18 +99,17 @@ class GameServiceTest {
     @Test
     void testUpdate() throws SQLException {
         GameDTO dto = new GameDTO();
-        dto.setId(1L);  // Устанавливаем ID
+        dto.setId(1L);
         dto.setTitle("Updated Game");
 
         GameModel model = new GameModel();
-        model.setGameId(1L);  // Устанавливаем ID в модель
+        model.setGameId(1L);
         model.setTitle("Updated Game");
 
-        when(gameMapper.toModel(dto)).thenReturn(model);  // Мокируем преобразование
+        when(gameMapper.toModel(dto)).thenReturn(model);
+        gameService.update(dto);
 
-        gameService.update(dto);  // Вызываем сервис
-
-        verify(gameDAO, times(1)).update(model);  // Проверяем, что update был вызван с нужными параметрами
+        verify(gameDAO, times(1)).update(model);
     }
 
     @Test

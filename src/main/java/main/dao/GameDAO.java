@@ -82,28 +82,23 @@ public class GameDAO {
         try (Connection conn = DatabaseConnection.getConnection();
              PreparedStatement stmt = conn.prepareStatement(sql)) {
 
-            // Логирование значений перед выполнением запроса
             System.out.println("Updating Game ID: " + game.getGameId());
             System.out.println("Title: " + game.getTitle());
             System.out.println("Genre: " + game.getGenre());
 
-            // Устанавливаем параметры в PreparedStatement
             stmt.setString(1, game.getTitle());
             stmt.setString(2, game.getGenre());
             stmt.setLong(3, game.getGameId());
 
-            // Выполнение запроса
             stmt.executeUpdate();
         } catch (SQLException e) {
-            // Логируем подробности ошибки
             System.err.println("Error updating game with ID: " + game.getGameId());
             ErrorHandler.handleSQLException(e);
-            throw e;  // Пробрасываем исключение, чтобы оно могло быть обработано выше
+            throw e;
         } catch (Exception e) {
-            // Логируем непредвиденные ошибки
             System.err.println("Unexpected error while updating game.");
             ErrorHandler.handleUnexpectedException(e);
-            throw e;  // Пробрасываем исключение
+            throw e;
         }
     }
 
